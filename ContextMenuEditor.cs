@@ -5,17 +5,26 @@ namespace PhotoFinder
 {
     class ContextMenuEditor
     {
-            RegistryKey[] RegistryAssociations = new RegistryKey[] // associations to change
-            {
-                Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.jpg\Shell", true),
-                Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.png\Shell", true),
-                Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.gif\Shell", true)
-            };
 
-
+        private RegistryKey[] RegistryAssociations;
         public void EditRegistry()
         {
-
+            try
+            {
+                RegistryAssociations = new RegistryKey[] // associations to change
+                {
+                    Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.jpg\Shell", true),
+                    Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.png\Shell", true),
+                    Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.gif\Shell", true)
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Administrator permissions is required");
+                Console.WriteLine("Start this app as administrator \n");
+                return;
+            }
+            
             for (int i = 0; i < RegistryAssociations.Length; ++i)
             {
                 if (!Array.Exists(RegistryAssociations[i].GetSubKeyNames(), element => element == "Find with google"))
