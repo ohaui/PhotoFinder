@@ -22,8 +22,6 @@ namespace PhotoFinder
                 }
 
                 Process.Start("cmd", $"/c start {FindImage.GetUriImage(PathToFile)}");
-
-
             }
         }
     }

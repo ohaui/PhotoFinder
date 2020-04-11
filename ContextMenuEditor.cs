@@ -44,12 +44,3 @@ namespace PhotoFinder
 
     }
 }
-//if (!Array.Exists(Registry.CurrentUser.OpenSubKey(@"SOFTWARE").GetSubKeyNames(), element => element == "PhotoFinder"))
-//{
-
-//    Registry.CurrentUser.OpenSubKey(@"SOFTWARE", true).CreateSubKey("PhotoFinder", true);
-//    Console.WriteLine("saved");
-//    RegistryKey PhotoFinder = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\PhotoFinder", true);
-//    PhotoFinder.SetValue("DefaultBrowserPath", new BrowserHandler().GetDefaultBrowserPath());
-
-//}
