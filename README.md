@@ -6,4 +6,4 @@
 - To delete "Find with Google" buttons from context menu you may start the app with "-clear" argument and admin rights
   or delete them by yourself.  
   
-  Check releases to download.
+  Check release to download.
