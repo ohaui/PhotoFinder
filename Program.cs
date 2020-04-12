@@ -12,7 +12,7 @@ namespace PhotoFinder
                 Console.WriteLine("Press any button to exit");
                 Console.ReadKey();
             }
-            else if(Environment.GetCommandLineArgs()[1] == "-clear")
+            else if (Environment.GetCommandLineArgs()[1] == "-clear")
             {
                 new ContextMenuEditor().ClearRegistry();
                 Console.WriteLine("Press any button to exit");
@@ -26,8 +26,8 @@ namespace PhotoFinder
                 {
                     PathToFile += Environment.GetCommandLineArgs()[i] + " ";
                 }
-
-                Process.Start("cmd", $"/c start {FindImage.GetUriImage(PathToFile)}");
+                Process.Start(FindImage.GetUriImage(PathToFile)); // if this will not work try this 
+                                                                  //Process.Start("cmd", $"/c start {FindImage.GetUriImage(PathToFile)}");
             }
         }
     }

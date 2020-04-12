@@ -352,3 +352,9 @@ MigrationBackup/
 *.sln
 
 *.csproj
+
+App.config
+
+packages.config
+
+Properties/AssemblyInfo.cs
