@@ -64,6 +64,7 @@ namespace PhotoFinder
                 {
                     Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.jpg\Shell", true),
                     Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.png\Shell", true),
+                    Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.jpeg\Shell", true),
                     Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Classes\SystemFileAssociations\.gif\Shell", true)
                 };
             }
