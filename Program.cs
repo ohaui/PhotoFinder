@@ -12,6 +12,12 @@ namespace PhotoFinder
                 Console.WriteLine("Press any button to exit");
                 Console.ReadKey();
             }
+            else if(Environment.GetCommandLineArgs()[1] == "-clear")
+            {
+                new ContextMenuEditor().ClearRegistry();
+                Console.WriteLine("Press any button to exit");
+                Console.ReadKey();
+            }
             else
             {
                 string PathToFile = "";
